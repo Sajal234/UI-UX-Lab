@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sajal - Personal Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: rgb(39, 39, 39);
+            color: white;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .main-heading {
+            text-align: center;
+            padding: 2rem;
+            background-color: rgb(60, 60, 60);
+        }
+        .tagline {
+            text-align: center;
+            padding: 1rem;
+            font-style: italic;
+        }
+        nav {
+            text-align: center;
+            padding: 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem;
+        }
+        nav a:hover {
+            background-color: rgb(80, 80, 80);
+        }
+        .section {
+            margin: 2rem;
+            padding: 1rem;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            align-items: center;
+        }
+        img {
+            border-radius: 50%;
+        }
+        .aboutMe {
+            display: flex;
+            flex-direction: column;
+            gap: 1.3rem;
+            max-width: 600px;
+        }
+        .aboutMe p {
+            font-size: 1.1rem;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        th, td {
+            border: 1px solid rgb(136, 133, 133);
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: rgb(145, 142, 142);
+            color: black;
+        }
+        .skills ul {
+            list-style-type: none;
+            padding: 1rem 0;
+        }
+        .skills li {
+            padding: 0.5rem;
+            margin: 0.3rem 0;
+            background-color: rgb(60, 60, 60);
+            border-radius: 5px;
+        }
+        .skills li:before {
+            content: "⭐ ";
+        }
+        .timeline {
+            padding: 1rem 0;
+            margin-left: 1.5rem;
+        }
+        .projects {
+            padding: 1rem 0;
+        }
+        .project-item {
+            margin: 1rem 0;
+            padding: 1rem;
+            background-color: rgb(50, 50, 50);
+            border-radius: 5px;
+        }
+        .contacts {
+            padding: 1rem 0;
+        }
+        .contacts a {
+            color: #4CAF50;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        .contacts a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: rgb(60, 60, 60);
+            margin-top: 2rem;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Main Website Heading -->
+    <div class="main-heading">
+        <h1>Sajal's Portfolio</h1>
+    </div>
+
+    <!-- Header with Tagline -->
+    <div class="tagline">
+        <p><em>Passionate Developer & Creative Problem Solver</em></p>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Section 1: About Me -->
+    <div id="about" class="section">
+        <h2>About Me</h2>
+        <div class="header">
+            <img src="data:image/jpeg;base64,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" 
+                 alt="Profile Photo" title="Sajal's Profile Picture" width="150" height="150">
+            
+            <div class="aboutMe">
+                <h3>Hello, I'm <strong>Sajal</strong></h3>
+                <p>I am a <b>passionate developer</b> with expertise in <em>web technologies</em>. I love creating <u>innovative solutions</u> and have a strong background in <mark>full-stack development</mark>. My journey in programming started with curiosity and has evolved into a professional career focused on building meaningful applications.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2: Education -->
+    <div id="education" class="section">
+        <h2>Education</h2>
+        <table>
+            <tr>
+                <th>Degree</th>
+                <th>Institution</th>
+                <th>Year</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td>Bachelor of Computer Science</td>
+                <td>Thapar University</td>
+                <td>2023-2027</td>
+                <td>8.0 CGPA</td>
+            </tr>
+            <tr>
+                <td>12th</td>
+                <td>DAV Public School</td>
+                <td>2021-2022</td>
+                <td>85%</td>
+            </tr>
+            <tr>
+                <td>10th</td>
+                <td>DAV Public School</td>
+                <td>2020-2021</td>
+                <td>85%</td>
+            </tr>
+        </table>
+
+        <div class="timeline">
+            <h3>Academic Timeline</h3>
+            <ol>
+                <li>Started Computer Science degree (2023)</li>
+                <li>Completed first year with distinction (2024)</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Section 3: Skills -->
+    <div id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills">
+            <ul>
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section 4: Projects -->
+    <div id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-item">
+                <h3>E-Commerce Website</h3>
+                <p>A full-stack e-commerce platform built with React and Node.js. Features include user authentication, payment integration, and admin dashboard.</p>
+                <!-- <a href="https://github.com/sajal/ecommerce" target="_blank">View on GitHub</a> -->
+            </div>
+            
+            <div class="project-item">
+                <h3>Task Management App</h3>
+                <p>A responsive web application for managing daily tasks with drag-and-drop functionality and real-time updates.</p>
+                <!-- <a href="https://github.com/sajal/taskmanager" target="_blank">View on GitHub</a> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 5: Contact -->
+    <div id="contact" class="section">
+        <h2>Contact</h2>
+        <div class="contacts">
+            <p><strong>Email:</strong> <a href="mailto:sajal@example.com">sajal@example.com</a></p>
+            <p><strong>Social Media:</strong></p>
+            <a href="#" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Twitter</a>
+        </div>
+    </div>
+
+    <footer>
+        Made by Sajal
+    </footer>
+
+
+</body>
+</html>
